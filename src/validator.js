@@ -12,7 +12,7 @@ const validator = {
     //Suma de pares:
 
     for ( let i = 0; i <lunhNum.length; i++){
-      if (i % 2 === 0 ){
+      if (i % 2 === 1 ){
         sumaPares = lunhNum[i]* 2;
 
         if(sumaPares[i]>9){
@@ -25,7 +25,7 @@ const validator = {
 
         totalSuma = parseInt( totalSuma) + parseInt (lunhNum[i]);
       }
-      else if (i % 2 === 1 ){
+      else if (i % 2 === 0 ){
         sumaImpares = parseInt(sumaImpares)+ parseInt(lunhNum[i]);
       }
 
@@ -42,17 +42,22 @@ const validator = {
     }
   },
 
-  maskify: function (cardnumber){
-    let maskNum = cardnumber.length;
-    let mask = "";
 
-    for (let i=0; i < (maskNum - 4); i++){
-      mask += "#";
+  //Para ocultar los 12 primeros digitos de la tarjeta de credito
+
+  maskify: function (cardnumber){
+ 
+    let resultado = "";
+
+    for ( let i=0; i<cardnumber.length -4 ; i++){
+      if (i<cardnumber.length -4 ){
+        resultado = resultado + "#"
+      } else {
+        resultado = resultado + cardnumber[i]
+      }
+
     }
-    let maskPosic = mask + cardnumber.substring(maskNum-4,maskNum);
-    return maskPosic
-    
-    console.log(maskPosic);
+    return resultado
 
   }
 

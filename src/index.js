@@ -1,25 +1,24 @@
 import validator from './validator.js';
 
-console.log(validator);
+
 
 function validate() {
-  const cardNumber = document.getElementById("cardnumber");
-  console.log("probando")
+  const cardNumber = document.getElementById("cardnumber");//
  
   const maski = validator.maskify(cardNumber.value);
 
   if (validator.isValid(cardNumber.value)){
     
     
-    alert("Tarjeta Válida, puedes comprar");
+    alert(`Tarjeta N° ${maski}  Válida, puedes pagar la inscripcion a tu curso`);
 
 
   } else {
-    // eslint-disable-next-line no-unused-vars
+ 
     alert( `Tarjeta Inválida N° ${maski}, Intenta de nuevo`);
   }
     
 }
-
+//miBoton llama a las 
 const miBoton = document.getElementById("miBoton");
 miBoton.addEventListener("click", validate);

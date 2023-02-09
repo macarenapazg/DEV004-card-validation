@@ -12,12 +12,12 @@ const validator = {
     //Suma de pares:
 
     for ( let i = 0; i <lunhNum.length; i++){
-      if (i % 2 === 0 ){
+      if (i % 2 === 1 ){
         sumaPares = lunhNum[i]* 2;
 
-        if(sumaPares[i]>9){
+        if(sumaPares >9){
           suma = sumaPares.toString().split("");
-          lunhNum[i]= parseInt(suma[0]+ parseInt(suma[1]))
+          lunhNum[i]= parseInt(suma[0])+ parseInt(suma[1])
         }
         else { 
           lunhNum[i] = sumaPares;
@@ -25,7 +25,7 @@ const validator = {
 
         totalSuma = parseInt( totalSuma) + parseInt (lunhNum[i]);
       }
-      else if (i % 2 === 1 ){
+      else if (i % 2 === 0 ){
         sumaImpares = parseInt(sumaImpares)+ parseInt(lunhNum[i]);
       }
 

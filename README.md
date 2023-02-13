@@ -7,4 +7,3 @@
 La pagina resuelve que el usuario ingrese el numero de su tarjeta y que este sea devuelto de manera confidencial ocultando los datos iniciales 
 
 https://macarenapazg.github.io/DEV004-card-validation/src/
-

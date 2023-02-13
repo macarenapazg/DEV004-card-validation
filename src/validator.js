@@ -13,27 +13,27 @@ const validator = {
 
     for ( let i = 0; i <lunhNum.length; i++){
       if (i % 2 === 1 ){
-        sumaPares = lunhNum[i]* 2;
+        sumaImpares = lunhNum[i]* 2;
 
-        if(sumaPares >9){
-          suma = sumaPares.toString().split("");
+        if(sumaImpares >9){
+          suma = sumaImpares.toString().split("");
           lunhNum[i]= parseInt(suma[0])+ parseInt(suma[1])
         }
         else { 
-          lunhNum[i] = sumaPares;
+          lunhNum[i] = sumaImpares;
         }
 
         totalSuma = parseInt( totalSuma) + parseInt (lunhNum[i]);
       }
       else if (i % 2 === 0 ){
-        sumaImpares = parseInt(sumaImpares)+ parseInt(lunhNum[i]);
+        sumaPares = parseInt(sumaPares)+ parseInt(lunhNum[i]);
       }
 
 
     }
     //suma de pares e impares
 
-    totalSuma += sumaImpares;
+    totalSuma += sumaPares;
 
     if(totalSuma %10 === 0 ){
       return true;
